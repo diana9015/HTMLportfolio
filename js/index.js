@@ -122,3 +122,36 @@ logClose.addEventListener('click', (e) => {
 	e.preventDefault();
 	logPop.style.display = 'none';
 });
+
+//탑버튼
+let btt = document.querySelector('#back-to-top'); //변수에 조절할 버튼 담음
+let docElem = document.documentElement;
+let docuHg = docElem.scrollHeight;
+let docuHt = docElem.offsetHeight;
+let offset;
+let scrollPos;
+
+docuheight = Math.max(docuHg, docuHt);
+
+if (docuheight != '') {
+	offset = docuheight / 4;
+}
+
+window.addEventListener('scroll', function () {
+	scrollPos = docElem.scrollTop; //스크롤 양 정의
+
+	console.log(scrollPos);
+
+	btt.className = scrollPos > offset ? 'visible' : '';
+});
+btt.addEventListener('click', function (e) {
+	e.preventDefault();
+
+	let scrollToTop = setInterval(function () {
+		if (scrollPos != 0) {
+			scrollBy(0, -50);
+		} else {
+			clearInterval(scrollToTop);
+		}
+	}, 15);
+});

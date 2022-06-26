@@ -493,30 +493,30 @@ header {
 
 						&:nth-of-type(1) {
 							top: 0px;
-							background: rgb(39, 38, 38);
+							background: $DkColor;
 							width: 0px;
-							height: 2px;
+							height: 1px;
 						}
 						&:nth-of-type(2) {
 							top: 0px;
 							right: 0px;
-							background: rgb(39, 38, 38);
+							background: $DkColor;
 							height: 0px;
-							width: 2px;
+							width: 1px;
 						}
 						&:nth-of-type(3) {
 							bottom: 0px;
 							right: 0px;
-							background: rgb(39, 38, 38);
+							background: $DkColor;
 							width: 0px;
-							height: 2px;
+							height: 1px;
 						}
 						&:nth-of-type(4) {
 							bottom: 0px;
 							left: 0px;
-							background: rgb(39, 38, 38);
+							background: $DkColor;
 							height: 0px;
-							width: 2px;
+							width: 1px;
 						}
 					}
 					&:hover {
@@ -602,6 +602,11 @@ header {
 
 					tr {
 						height: 90px;
+						box-shadow: 1px 6px 6px 1px rgb(224, 223, 223);
+
+						&:hover {
+							box-shadow: 1px 1px 2px 1px rgb(224, 223, 223);
+						}
 
 						th {
 							width: 50%;
@@ -798,6 +803,31 @@ header {
 				}
 			}
 		}
+	}
+
+	#back-to-top {
+		position: fixed;
+		bottom: 1.5em;
+		right: 1.5em;
+		background-color: rgba(255, 255, 255, 0.9);
+		color: #313943;
+		border-radius: 5px;
+		padding: 1em;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-weight: 700;
+		box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.25);
+		transition: all 0.3s ease-in-out;
+		opacity: 0;
+		font-size: 0.75em;
+	}
+
+	#back-to-top:hover {
+		background-color: #fff;
+	}
+
+	#back-to-top.visible {
+		opacity: 1;
 	}
 }
 
@@ -1060,18 +1090,18 @@ header {
 				}
 
 				#slider {
-					height: 370px;
+					height: 360px;
 					ul {
 						li {
 							article {
+								height: 50vh;
 								width: 100%;
-								height: 50%;
 								margin-right: 20px;
 								justify-content: space-between;
 								align-items: center;
 
 								p {
-									font: normal 1.1rem 'arial';
+									font: normal 1rem 'arial';
 									text-align: left;
 								}
 								h2 {
@@ -1236,7 +1266,7 @@ header {
 		}
 
 		.popup {
-			width: 100%;
+			width: 80vw;
 		}
 	}
 
@@ -1397,7 +1427,7 @@ header {
 				}
 
 				#slider {
-					height: 580px;
+					height: 30vh;
 					ul {
 						width: calc(100% * 3);
 						li {
@@ -1406,7 +1436,7 @@ header {
 							article {
 								margin-right: 20px;
 								width: 100%;
-								height: 280px;
+								height: 30vh;
 								justify-content: space-between;
 								align-items: center;
 								margin-right: 0px;
@@ -1416,7 +1446,7 @@ header {
 								}
 
 								p {
-									font: normal 15px 'arial';
+									font: normal 1rem 'arial';
 									text-align: center;
 								}
 								h2 {

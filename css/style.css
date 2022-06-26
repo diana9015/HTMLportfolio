@@ -254,7 +254,7 @@ font-family: 'Voces', cursive;
   display: none;
   width: 160px;
   height: 260px;
-  z-index: 9999;
+  z-index: 9;
   position: absolute;
   right: 10px;
   top: 50px;
@@ -1846,57 +1846,59 @@ aside .close {
     font: normal 15px/1.2 "arial";
   }
 }
-.community table {
+.community .inner table {
   width: 100%;
   border-top: 2px solid #111;
   border-bottom: 1px solid #999;
   margin: 30px auto;
   border-collapse: collapse;
 }
-.community table th {
+.community .inner table th {
   padding: 30px 0;
   margin-bottom: 5px;
   border-bottom: 2px soild black;
-  background: white;
+  background: gainsboro;
 }
-.community table tr {
+.community .inner table tr {
   height: 40px;
   vertical-align: inherit;
   border-color: inherit;
 }
-.community table tr:hover {
+.community .inner table tr:hover {
   background: #f4f4f4;
 }
-.community table tr td {
+.community .inner table tr td {
   padding: 10px;
   text-align: center;
   color: black;
   border-bottom: 5px solid white;
 }
-.community table tr td:nth-of-type(1) {
+.community .inner table tr td:nth-of-type(1) {
   text-align: center;
   font: bold 17px/1 black;
 }
-.community table tr td:nth-of-type(2) {
+.community .inner table tr td:nth-of-type(2) {
   text-align: left;
   font: normal 16px/1 black;
   padding: 10px 10px;
 }
-.community table tr td a {
+.community .inner table tr td a {
   color: black;
   font: normal 15px/1 "arial";
 }
-.community .pagination {
+.community .inner .pagination {
   width: 100%;
   text-align: center;
-  padding: 20px 30%;
+  padding: 20px 20px;
+  display: flex;
 }
-.community .pagination::after {
+.community .inner .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.community .pagination .prev {
+.community .inner .pagination .prev {
+  width: 100%;
   float: left;
   display: block;
   background: white;
@@ -1905,11 +1907,12 @@ aside .close {
   text-align: center;
   transition: 1s;
 }
-.community .pagination .prev:hover {
+.community .inner .pagination .prev:hover {
   color: #969494;
   transform: scale(1.2);
 }
-.community .pagination .next {
+.community .inner .pagination .next {
+  width: 100%;
   float: right;
   display: block;
   background: white;
@@ -1918,31 +1921,138 @@ aside .close {
   text-align: center;
   transition: 1s;
 }
-.community .pagination .next:hover {
+.community .inner .pagination .next:hover {
   color: #969494;
   transform: scale(1.2);
 }
-.community .pagination .numbers {
+.community .inner .pagination .numbers {
   display: inline-block;
   font-size: 0;
+  width: 100%;
 }
-.community .pagination .numbers a {
-  margin-right: 10px;
+.community .inner .pagination .numbers a {
   display: inline-block;
   width: 30px;
   height: 30px;
   font: 12px/30px "arial";
   color: black;
 }
-.community .pagination .numbers a:nth-last-of-type(1) {
+.community .inner .pagination .numbers a:nth-last-of-type(1) {
   margin-right: 0px;
 }
-.community .pagination .numbers a:hover {
+.community .inner .pagination .numbers a:hover {
   background: #969494;
   color: #fff;
   border-radius: 50%;
 }
 
+@media screen and (max-width: 1179px) {
+  .community .inner {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+  }
+  .community .inner table {
+    width: 100%;
+    border-top: 2px solid #111;
+    border-bottom: 1px solid #999;
+    margin: 30px auto;
+    border-collapse: collapse;
+  }
+  .community .inner table th {
+    padding: 30px 0;
+    margin-bottom: 5px;
+    border-bottom: 2px soild black;
+    background: gainsboro;
+  }
+  .community .inner table tr {
+    height: 40px;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+  .community .inner table tr:hover {
+    background: #f4f4f4;
+  }
+  .community .inner table tr td {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    border-bottom: 5px solid white;
+  }
+  .community .inner table tr td:nth-of-type(1) {
+    text-align: center;
+    font: bold 17px/1 black;
+  }
+  .community .inner table tr td:nth-of-type(2) {
+    text-align: left;
+    font: normal 16px/1 black;
+    padding: 10px 10px;
+  }
+  .community .inner table tr td a {
+    color: black;
+    font: normal 15px/1 "arial";
+  }
+  .community .inner .pagination {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px;
+    display: flex;
+  }
+  .community .inner .pagination::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .community .inner .pagination .prev {
+    width: 100%;
+    float: left;
+    display: block;
+    background: white;
+    font: 12px/30px "arial";
+    color: black;
+    text-align: center;
+    transition: 1s;
+  }
+  .community .inner .pagination .prev:hover {
+    color: #969494;
+    transform: scale(1.2);
+  }
+  .community .inner .pagination .next {
+    width: 100%;
+    float: right;
+    display: block;
+    background: white;
+    font: 12px/30px "arial";
+    color: black;
+    text-align: center;
+    transition: 1s;
+  }
+  .community .inner .pagination .next:hover {
+    color: #969494;
+    transform: scale(1.2);
+  }
+  .community .inner .pagination .numbers {
+    display: inline-block;
+    font-size: 0;
+    width: 100%;
+  }
+  .community .inner .pagination .numbers a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font: 12px/30px "arial";
+    color: black;
+  }
+  .community .inner .pagination .numbers a:nth-last-of-type(1) {
+    margin-right: 0px;
+  }
+  .community .inner .pagination .numbers a:hover {
+    background: #969494;
+    color: #fff;
+    border-radius: 50%;
+  }
+}
 .contactus .inner {
   width: 1180px;
   margin: 0 auto;
@@ -2840,30 +2950,30 @@ header .loginpop form a {
 }
 .content .servicelist .inner .wrap article span:nth-of-type(1) {
   top: 0px;
-  background: #272626;
+  background: #383434;
   width: 0px;
-  height: 2px;
+  height: 1px;
 }
 .content .servicelist .inner .wrap article span:nth-of-type(2) {
   top: 0px;
   right: 0px;
-  background: #272626;
+  background: #383434;
   height: 0px;
-  width: 2px;
+  width: 1px;
 }
 .content .servicelist .inner .wrap article span:nth-of-type(3) {
   bottom: 0px;
   right: 0px;
-  background: #272626;
+  background: #383434;
   width: 0px;
-  height: 2px;
+  height: 1px;
 }
 .content .servicelist .inner .wrap article span:nth-of-type(4) {
   bottom: 0px;
   left: 0px;
-  background: #272626;
+  background: #383434;
   height: 0px;
-  width: 2px;
+  width: 1px;
 }
 .content .servicelist .inner .wrap article:hover span {
   transition: all 1s;
@@ -2934,6 +3044,10 @@ header .loginpop form a {
 }
 .content .award .inner .wrap table tr {
   height: 90px;
+  box-shadow: 1px 6px 6px 1px #e0dfdf;
+}
+.content .award .inner .wrap table tr:hover {
+  box-shadow: 1px 1px 2px 1px #e0dfdf;
 }
 .content .award .inner .wrap table tr th {
   width: 50%;
@@ -3106,6 +3220,28 @@ header .loginpop form a {
 .content .contact .inner .contwrap article p {
   color: #383434;
   font: normal 17px/1.2 "arial";
+}
+.content #back-to-top {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #313943;
+  border-radius: 5px;
+  padding: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  font-size: 0.75em;
+}
+.content #back-to-top:hover {
+  background-color: #fff;
+}
+.content #back-to-top.visible {
+  opacity: 1;
 }
 
 #footer {
@@ -3322,17 +3458,17 @@ header .loginpop form a {
     padding-bottom: 10px;
   }
   .content .recommend .inner #slider {
-    height: 370px;
+    height: 360px;
   }
   .content .recommend .inner #slider ul li article {
+    height: 50vh;
     width: 100%;
-    height: 50%;
     margin-right: 20px;
     justify-content: space-between;
     align-items: center;
   }
   .content .recommend .inner #slider ul li article p {
-    font: normal 1.1rem "arial";
+    font: normal 1rem "arial";
     text-align: left;
   }
   .content .recommend .inner #slider ul li article h2 {
@@ -3462,7 +3598,7 @@ header .loginpop form a {
     font: normal 15px/1 "arial";
   }
   header .popup {
-    width: 100%;
+    width: 80vw;
   }
 
   .content .boxwrap {
@@ -3597,7 +3733,7 @@ header .loginpop form a {
     font: bold 23px/1 "arial";
   }
   .content .recommend .inner #slider {
-    height: 580px;
+    height: 30vh;
   }
   .content .recommend .inner #slider ul {
     width: 300%;
@@ -3609,7 +3745,7 @@ header .loginpop form a {
   .content .recommend .inner #slider ul li article {
     margin-right: 20px;
     width: 100%;
-    height: 280px;
+    height: 30vh;
     justify-content: space-between;
     align-items: center;
     margin-right: 0px;
@@ -3618,7 +3754,7 @@ header .loginpop form a {
     margin-bottom: 20px;
   }
   .content .recommend .inner #slider ul li article p {
-    font: normal 15px "arial";
+    font: normal 1rem "arial";
     text-align: center;
   }
   .content .recommend .inner #slider ul li article h2 {
