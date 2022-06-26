@@ -1,0 +1,114 @@
+.community {
+	.sub_visual {
+	}
+
+	table {
+		width: 100%;
+		border-top: 2px solid #111;
+		border-bottom: 1px solid #999;
+		margin: 30px auto;
+		border-collapse: collapse;
+		th {
+			padding: 30px 0;
+			margin-bottom: 5px;
+			border-bottom: 2px soild black;
+			background: white;
+		}
+
+		tr {
+			height: 40px;
+			vertical-align: inherit;
+			border-color: inherit;
+
+			&:hover {
+				background: rgb(244, 244, 244);
+			}
+
+			td {
+				padding: 10px;
+				text-align: center;
+				color: black;
+				border-bottom: 5px solid white;
+
+				&:nth-of-type(1) {
+					text-align: center;
+					font: bold 17px/1 black;
+				}
+
+				&:nth-of-type(2) {
+					text-align: left;
+					font: normal 16px/1 black;
+					padding: 10px 10px;
+				}
+
+				a {
+					color: black;
+					font: normal 15px/1 'arial';
+				}
+			}
+		}
+	}
+
+	.pagination {
+		width: 100%;
+		text-align: center;
+		padding: 20px 30%;
+
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.prev {
+			float: left;
+			display: block;
+			background: white;
+			font: 12px/30px 'arial';
+			color: black;
+			text-align: center;
+			transition: 1s;
+
+			&:hover {
+				color: $BkColor;
+				transform: scale(1.2);
+			}
+		}
+		.next {
+			float: right;
+			display: block;
+			background: white;
+			font: 12px/30px 'arial';
+			color: black;
+			text-align: center;
+			transition: 1s;
+			&:hover {
+				color: $BkColor;
+				transform: scale(1.2);
+			}
+		}
+
+		.numbers {
+			display: inline-block;
+			font-size: 0;
+
+			a {
+				margin-right: 10px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				font: 12px/30px 'arial';
+				color: black;
+
+				&:nth-last-of-type(1) {
+					margin-right: 0px;
+				}
+
+				&:hover {
+					background: $BkColor;
+					color: #fff;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+}
+fieldset {
+	border: none;
+}
+.wrap::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.h {
+	position: absolute;
+	top: -9999px;
+	opacity: 0;
+}
+
+$tablet: 1179px;
+$mobile: 539px;

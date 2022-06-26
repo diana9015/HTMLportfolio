@@ -1,0 +1,139 @@
+.join {
+  .sub_visual {
+    width: 100%;
+  }
+
+  .inner {
+    width: 1180px;
+    height: 100%;
+
+    .wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background: $DkColor;
+
+      .visual {
+        height: 100%;
+        width: 50%;
+        padding: 25% 5%;
+        background: url(../img/nati-melnychuk-dFBhXJHKNeo-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+
+        .txt {
+          width: 100%;
+          height: 220px;
+          padding: 5%;
+          opacity: 1;
+          border: 1px solid black;
+          h2 {
+            font: bold 40px/1 "arial";
+            color: black;
+            margin-bottom: 30px;
+            opacity: 1;
+          }
+          p {
+            margin-bottom: 20px;
+            color: black;
+            font: normal 18px/1 "arial";
+          }
+        }
+      }
+      form {
+        width: 50%;
+        height: 100%;
+        background: white;
+        border: 1px solid $BkColor;
+        fieldset {
+          padding: 19px;
+          width: 100%;
+
+          h2 {
+            color: $DkColor;
+            size: 90px;
+            font-weight: 700;
+          }
+
+          #terms {
+            resize: none;
+            width: 100%;
+            height: 100px;
+            color: rgb(127, 136, 179);
+          }
+
+          label[for="agree"] {
+            font: bold 14px/1 "arial";
+            color: #666;
+          }
+
+          table {
+            width: 100%;
+            border-top: $DkColor 2px solid;
+            border-bottom: $DkColor 2px solid;
+            /*글씨 크키가 조절이 안됨*/
+            caption .h {
+              color: $BgColor;
+              size: 80px;
+              font-weight: 700;
+            }
+
+            th {
+              background: $BkColor;
+              padding: 15px 20px;
+              font: normal 14px/1 "arial";
+              color: white;
+              opacity: 0.9;
+
+              input[type="submit"],
+              input[type="reset"] {
+                width: 150px;
+                height: 40px;
+                border: none;
+                background: #444;
+                font: bold 14px/1 "arial";
+                color: #fff;
+                margin: 0 10px;
+              }
+              &:last-child {
+                background: white;
+              }
+            }
+
+            td {
+              border-bottom: 1px solid #bbb;
+              padding: 20px 20px;
+              font: normal 14px/1 "arial";
+              color: #444;
+
+              input[type="text"],
+              input[type="password"] {
+                width: 90%;
+                height: 30px;
+              }
+
+              input[type="password2"] {
+                width: 90%;
+                height: 30px;
+              }
+
+              label {
+                margin-right: 30px;
+              }
+              input[type="checkbox"],
+              input[type="radio"] {
+                margin-right: 5px;
+
+                /*글씨가 조절이 안됨*/
+                font: bold 14px/1 "arial";
+                color: pink;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

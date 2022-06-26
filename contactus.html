@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>subpage layout</title>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f6a7a92468c6aa7b4ff183008e3efe08"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/ec40d5cb2f.js" crossorigin="anonymous"></script>
+  <script defer src="js/contactus.js"></script>
+  <script defer src="js/sub.js"></script>
+</head>
+
+<body>
+  <header id="header_sub">
+    <div class="mobbtn">
+      <a href="#" class="btnCall">
+        <span>메뉴호출</span>
+      </a>
+    </div>
+    <div class="inner">
+      <div class="wrap">
+        <nav>
+          <div class="webnav">
+            <div class="top_nav">
+              <ul>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="department.html">Department</a></li>
+              </ul>
+              <h1><a href="index.html">Cosmetic</a></h1>
+              <ul>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#" class="logopen">Log in</a></li>
+              </ul>
+            </div>
+            <div class="centernav">
+              <ul>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="submob">
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="department.html">Department</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="#" class="logopenmob">Log in</a></li>
+      </ul>
+    </div>
+    <div class="sublog">
+      <h1>Sign in</h1>
+      <a href="#" class="sublogclose">close</a>
+      <form action="resul.html" id="login">
+        <input type="text" id="userid" name="userid" placeholder="id" />
+        <input type="password" id="psw" name="psw" placeholder="password" />
+        <input type="checkbox" />
+        <p>remember me</p>
+        <input type="submit" id="loginbtn" value="Login" />
+        <a href="join.html">dont you have account?</a>
+      </form>
+    </div>
+  </header>
+
+  <section class="content_sub contactus">
+    <div class="inner">
+      <h1>contactus<span>연락정보</span></h1>
+      <div class="innertop">
+        <p>Cosmetic</p>
+        <br />
+        <h1>Get In Touch!</h1>
+        <h2>
+          Lorem ipsum dolor sit <br />adipisicing elit. Voluptas, placeat?
+        </h2>
+      </div>
+      <div class="contwrap">
+        <div class="contactus_topba">
+          <article>
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Open Every Day</h3>
+            <p>Monday-Friday : 6am - 5pm<br />Weekend : 9am - 2pm</p>
+          </article>
+          <article>
+            <i class="fas fa-phone-alt"></i>
+            <h3>Call us</h3>
+            <p>1-123-1234<br />1-123-1234</p>
+          </article>
+          <article>
+            <i class="fas fa-envelope"></i>
+            <h3>Email us</h3>
+            <p>worldwideweb@gmail.com</p>
+          </article>
+        </div>
+        <div id="map"></div>
+        <div class="contactform">
+          <div class="txt">
+            <h3>Anything we can help</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
+              laborum! Rem explicabo praesentium earum aperiam, voluptates
+              reiciendis nihil ipsum id!
+            </p>
+          </div>
+          <fieldset>
+            <form action="http://www.naver.com">
+              <input type="text" class="name" name="name" placeholder="name" />
+              <input type="email" class="email" name="email" placeholder="email" />
+              <textarea width="100%" placeholder="comment here"></textarea>
+              <input type="submit" class="submit" value="submit" />
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer_sub">
+    <div class="inner">
+      <h1>Cosmetic</h1>
+      <p>Copyright &copy; 2022 Cosmetic ALL right Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

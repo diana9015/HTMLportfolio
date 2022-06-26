@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/ec40d5cb2f.js" crossorigin="anonymous"></script>
+  <script defer src="js/join.js"></script>
+  <script defer src="js/sub.js"></script>
+</head>
+
+<body>
+  <header id="header_sub">
+    <div class="mobbtn">
+      <a href="#" class="btnCall">
+        <span>메뉴호출</span>
+      </a>
+    </div>
+    <div class="inner">
+      <div class="wrap">
+        <nav>
+          <div class="webnav">
+            <div class="top_nav">
+              <ul>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="department.html">Department</a></li>
+              </ul>
+              <h1><a href="index.html">Cosmetic</a></h1>
+              <ul>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#" class="logopen">Log in</a></li>
+              </ul>
+            </div>
+            <div class="centernav">
+              <ul>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="submob">
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="department.html">Department</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="#" class="logopenmob">Log in</a></li>
+      </ul>
+    </div>
+    <div class="sublog">
+      <h1>Sign in</h1>
+      <a href="#" class="sublogclose">close</a>
+      <form action="resul.html" id="login">
+        <input type="text" id="userid" name="userid" placeholder="id" />
+        <input type="password" id="psw" name="psw" placeholder="password" />
+        <input type="checkbox" />
+        <p>remember me</p>
+        <input type="submit" id="loginbtn" value="Login" />
+        <a href="join.html">dont you have account?</a>
+      </form>
+    </div>
+
+  </header>
+  <section class="content_sub join">
+    <div class="inner">
+      <h1>Join<span>회원가입</span></h1>
+      <div class="wrap">
+        <div class="visual">
+          <div class="txt">
+            <h2>Sign up</h2>
+            <p>
+              Lorem ipsum dolor amet consectetur adipisicing elit. <br />
+              Illum a iure commodi accusantium at officia.
+            </p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <form action="result.html" id="member">
+          <fieldset>
+            <h2>
+              <legend>Tems & Policy</legend>
+            </h2>
+            <textarea name="terms" id="terms" cols="30" rows="10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo amet iusto quibusdam voluptatibus animi sapiente nulla, asperiores modi officia eaque at sunt placeat fugit voluptatem tempore. Saepe, libero rerum.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae atque illum impedit dicta eveniet ipsa excepturi eos unde ipsum possimus hic aut optio minus, libero sint nobis obcaecati, laborum in!  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero optio totam non, neque ullam id corporis officiis sint quo iste dolorum temporibus saepe reprehenderit pariatur perferendis, mollitia eveniet omnis quam?</textarea>
+            <label for="agree"><input type="checkbox" id="agree" name="agree" />
+              Agree with this contract
+            </label>
+            <table>
+              <caption class="h">
+                회원가입양식
+              </caption>
+              <tr>
+                <th scope="row"><label for="id">ID</label></th>
+                <td>
+                  <input type="text" name="userid" id="userid" placeholder="Please enter new ID" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd1">Password</label></th>
+                <td>
+                  <input type="password" name="pwd1" id="pwd1" placeholder="Please enter password" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd2">Password</label></th>
+                <td>
+                  <input type="password" name="pwd2" id="pwd2" placeholder="Please enter password again" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="name">Name</label></th>
+                <td>
+                  <input type="text" name="username" id="username" placeholder="Please enter your name." />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Gender</th>
+
+                <td>
+                  <label for="man">
+                    <input type="radio" id="man" name="gender" value="man" />Man
+                  </label>
+                  <label for="woman">
+                    <input type="radio" id="woman" name="gender" value="woman" />Woman
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="email">Email</label></th>
+                <td>
+                  <input type="text" name="email" id="email" placeholder="Please enter your email" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Skin type</th>
+                <td>
+                  <label for="Dry"><input type="checkbox" name="type" id="Dry" value="Dry" />Dry</label>
+
+                  <label for="Normal"><input type="checkbox" id="Normal" name="type" value="Normal" />Normal</label>
+                  <label for="Oily"><input type="checkbox" id="Oily" name="type" value="Oily" />Oily</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="count">Product</label></th>
+                <td>
+                  <select name="count" id="count">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="more">more</option>
+                  </select>
+                  <p>How many cosmetics do you use in a day?</p>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <input type="reset" value="cancel" />
+                  <input type="submit" value="submit" />
+                </th>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer_sub">
+    <div class="inner">
+      <h1>Cosmetic</h1>
+      <p>Copyright &copy; 2022 Cosmetic ALL right Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

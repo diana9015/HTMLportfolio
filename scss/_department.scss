@@ -1,0 +1,573 @@
+.department {
+	height: 100%;
+	width: 100%;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		height: 100%;
+
+		article {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			padding-left: 5%;
+			padding-right: 5%;
+			border-bottom: 1px dotted $BkColor;
+			padding-bottom: 100px;
+
+			h1 {
+				font: normal 17px/1 'Voces', cursive;
+				text-align: center;
+				color: $DkColor;
+				margin: 0px;
+			}
+
+			p {
+				padding-top: 50px;
+				font: normal 30px/1 'Voces', cursive;
+				text-align: center;
+				color: $DkColor;
+			}
+		}
+
+		//주사위랑 소개글//
+		.introloc {
+			padding-top: 130px;
+			padding-bottom: 150px;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			position: relative;
+			.cubewrap {
+				padding-top: 70px;
+				position: relative;
+				left: 20px;
+				width: 300px;
+				height: 300px;
+				perspective: 1000px;
+
+				.cube {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					transform-style: preserve-3d;
+					transition: ease-in-out 9s;
+					animation: rotateCube 7s linear infinite;
+					cursor: pointer;
+
+					@keyframes rotateCube {
+						100% {
+							transform: rotateX(360deg);
+						}
+					}
+				}
+			}
+
+			.introbox {
+				position: absolute;
+				width: calc(100% - 400px);
+				height: 470px;
+				right: 0px;
+				top: 100px;
+				overflow: hidden;
+
+				li {
+					left: 100%;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background: $OrColor;
+
+					&.on {
+						transition: 0.7s linear;
+						left: 0px;
+						.profile {
+							.profileCont {
+								transition-delay: 0.7s;
+								transition-duration: 1.5s;
+								top: 0%;
+							}
+						}
+					}
+
+					.profile {
+						width: 100%;
+						height: 100%;
+
+						.profileCont {
+							padding-bottom: 5px;
+							display: flex;
+							flex-direction: column;
+							justify-content: space-around;
+							width: 100%;
+							height: 100%;
+							position: relative;
+							padding: 5%;
+							height: 100%;
+							top: 100%;
+
+							.name {
+								text-align: center;
+								width: 100%;
+
+								h2 {
+									font: normal 50px/1 'arial';
+									color: $DbgColor;
+								}
+							}
+
+							h3 {
+								font: normal 30px/1 'arial';
+								color: $DbgColor;
+							}
+
+							p {
+								font: normal 18.5px/1.1 'arial';
+								color: $DkColor;
+							}
+
+							.proicon {
+								width: 100%;
+
+								i {
+									margin-right: 12px;
+									font-size: 20px;
+									background: $DbgColor;
+									float: right;
+									color: white;
+									padding: 5px;
+									border-radius: 5px;
+									cursor: pointer;
+
+									&:hover {
+										opacity: 0.5;
+										transition: 0.7s;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.cube__face {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				padding: 10px;
+				background: $BgColor;
+
+				.innerpro {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					top: 0px;
+
+					.intro {
+						width: 100%;
+					}
+				}
+
+				&:hover {
+					.innerpro {
+						opacity: 0.7;
+						transition: linear 0.5s;
+					}
+				}
+			}
+
+			.cube__face--front {
+				width: 300px;
+				height: 300px;
+				transform: rotate(0deg) translateZ(150px);
+				.innerpro {
+					background: url(../img/profile1.jpg);
+					background-position: center;
+					background-size: cover;
+				}
+			}
+			.cube__face--right {
+				height: 300px;
+				width: 300px;
+				left: 100px;
+				transform: rotateY(-90deg) translateZ(-50px);
+			}
+			.cube__face--back {
+				width: 300px;
+				height: 300px;
+				transform: rotateY(180deg) translateZ(150px);
+				.innerpro {
+					transform: rotate(180deg);
+					background: url(../img/profile2.jpg);
+					background-position: center;
+					background-size: cover;
+				}
+			}
+			.cube__face--left {
+				width: 300px;
+				height: 300px;
+				right: 250px;
+				transform: rotateY(-90deg) translateZ(-100px);
+			}
+			.cube__face--top {
+				width: 300px;
+				height: 300px;
+				transition: center center;
+				transform: rotateX(90deg) translateZ(-150px);
+
+				.innerpro {
+					transform: rotateX(-180deg);
+					background: url(../img/profile3.jpg);
+					background-size: cover;
+					background-position: center;
+				}
+			}
+			.cube__face--bottom {
+				width: 300px;
+				height: 300px;
+				top: -100px;
+				transition: center center;
+				transform: rotateX(-360deg) rotateX(-90deg) translateZ(-50px);
+
+				.innerpro {
+					background: url(../img/profile5.jpg);
+					background-position: center;
+					background-size: cover;
+					transform: rotateX(-180deg);
+				}
+			}
+		}
+
+		//조직도//
+
+		.division {
+			margin-top: 80px;
+			background: url(../img/images.jpg) no-repeat center;
+			width: 100%;
+			height: 800px;
+		}
+
+		.div_tree {
+			position: absolute;
+			top: -9999px;
+			opacity: 0;
+
+			//1depth
+			li {
+				span {
+					margin-left: 50px;
+					display: block;
+					width: 25%;
+					height: 50px;
+					background: rgb(5, 136, 251);
+					/*폰트정렬 유심히 보기*/
+					font: bold 13px/50px 'arial';
+					color: white;
+					text-align: center;
+					margin-bottom: 20px;
+					border-radius: 20px;
+					position: relative;
+
+					&:hover {
+						background: rgb(71, 71, 71);
+						transition: 0.8s;
+					}
+
+					&::after {
+						content: '';
+						display: block;
+						width: 1px;
+						height: calc((50px + 20px) * 2 - 25px);
+						background: #aaa;
+						position: absolute;
+						top: 50px;
+						left: 50px;
+					}
+				}
+
+				//2depth
+				ul li {
+					span {
+						transform: translateX(70px);
+						background: rgb(100, 181, 252);
+
+						&:hover {
+							background: rgb(71, 71, 71);
+							transition: 0.8s;
+							color: white;
+						}
+
+						&::before {
+							content: '';
+							display: block;
+							height: 1px;
+							width: 16%;
+							background: gray;
+							position: absolute;
+							top: 50%;
+							left: -20px;
+						}
+					}
+
+					&:nth-of-type(1) span::after {
+						height: 0;
+					}
+
+					&:nth-of-type(2) span::after {
+						height: calc((50px + 20px) * 14 - 25px);
+						background: gray;
+					}
+
+					//3depth
+					ul li {
+						span {
+							transform: translateX(140px);
+							background: rgb(186, 221, 252);
+							font: bold 13px/50px 'arial';
+							color: rgb(3, 113, 248);
+						}
+
+						&:nth-of-type(1) span::after {
+							height: calc((50px + 20px) * 2 - 25px);
+							background: gray;
+						}
+
+						&:nth-of-type(2) span::after {
+							height: calc((50px + 20px) * 2 - 25px);
+							background: gray;
+						}
+
+						&:nth-of-type(3) span::after {
+							height: calc((50px + 20px) * 2 - 25px);
+							background: gray;
+						}
+
+						&:nth-of-type(4) span::after {
+							height: calc((50px + 20px) * 3 - 25px);
+							background: gray;
+						}
+
+						&:nth-of-type(5) span::after {
+							height: calc(70px - 25px);
+							background: gray;
+						}
+
+						//4depth
+						ul li {
+							span {
+								transform: translateX(210px);
+								background: rgb(237, 243, 248);
+								color: rgb(3, 113, 248);
+
+								&::after {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.department {
+		.inner {
+			padding-left: 20px;
+			padding-right: 20px;
+			position: relative;
+
+			article {
+				padding-left: 3%;
+				padding-right: 3%;
+			}
+
+			.introloc {
+				padding-bottom: 70px;
+				padding-top: 190px;
+				flex-direction: column;
+				.cubewrap {
+					margin: 0 auto;
+					padding-top: 0px;
+					left: 0px;
+				}
+
+				.introbox {
+					margin-right: 20px;
+					margin: 0 auto;
+					position: relative;
+					width: 100%;
+					transition: all 2s;
+
+					li {
+						margin-right: 20px;
+						background: $OrColor;
+					}
+				}
+			}
+
+			.cubeintro {
+				width: 100%;
+				position: absolute;
+				top: 500px;
+				h2 {
+					font-size: 18px;
+				}
+			}
+
+			.division {
+				margin-top: 80px;
+				background: url(../img/images.jpg) no-repeat center;
+				width: 100%;
+				height: 800px;
+			}
+
+			.div_tree {
+				position: absolute;
+				top: -9999px;
+				opacity: 0;
+
+				//1depth
+				li {
+					span {
+						margin-left: 50px;
+						display: block;
+						width: 25%;
+						height: 50px;
+						background: rgb(5, 136, 251);
+						/*폰트정렬 유심히 보기*/
+						font: bold 13px/50px 'arial';
+						color: white;
+						text-align: center;
+						margin-bottom: 20px;
+						border-radius: 20px;
+						position: relative;
+
+						&:hover {
+							background: rgb(71, 71, 71);
+							transition: 0.8s;
+						}
+
+						&::after {
+							content: '';
+							display: block;
+							width: 1px;
+							height: calc((50px + 20px) * 2 - 25px);
+							background: #aaa;
+							position: absolute;
+							top: 50px;
+							left: 50px;
+						}
+					}
+
+					//2depth
+					ul li {
+						span {
+							transform: translateX(70px);
+							background: rgb(100, 181, 252);
+
+							&:hover {
+								background: rgb(71, 71, 71);
+								transition: 0.8s;
+								color: white;
+							}
+
+							&::before {
+								content: '';
+								display: block;
+								height: 1px;
+								width: 16%;
+								background: gray;
+								position: absolute;
+								top: 50%;
+								left: -20px;
+							}
+						}
+
+						&:nth-of-type(1) span::after {
+							height: 0;
+						}
+
+						&:nth-of-type(2) span::after {
+							height: calc((50px + 20px) * 14 - 25px);
+							background: gray;
+						}
+
+						//3depth
+						ul li {
+							span {
+								transform: translateX(140px);
+								background: rgb(186, 221, 252);
+								font: bold 13px/50px 'arial';
+								color: rgb(3, 113, 248);
+							}
+
+							&:nth-of-type(1) span::after {
+								height: calc((50px + 20px) * 2 - 25px);
+								background: gray;
+							}
+
+							&:nth-of-type(2) span::after {
+								height: calc((50px + 20px) * 2 - 25px);
+								background: gray;
+							}
+
+							&:nth-of-type(3) span::after {
+								height: calc((50px + 20px) * 2 - 25px);
+								background: gray;
+							}
+
+							&:nth-of-type(4) span::after {
+								height: calc((50px + 20px) * 3 - 25px);
+								background: gray;
+							}
+
+							&:nth-of-type(5) span::after {
+								height: calc(70px - 25px);
+								background: gray;
+							}
+
+							//4depth
+							ul li {
+								span {
+									transform: translateX(210px);
+									background: rgb(237, 243, 248);
+									color: rgb(3, 113, 248);
+
+									&::after {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $mobile) {
+	.department {
+		.inner {
+			width: 100%;
+
+			h1 {
+				font-size: 40px;
+			}
+
+			.division {
+				height: auto;
+				background: none;
+
+				.div_tree {
+					position: relative;
+					top: 0px;
+					opacity: 1;
+					transition: 3s;
+				}
+			}
+
+			/*호버가 안걸리는 이유?*/
+		}
+	}
+}
