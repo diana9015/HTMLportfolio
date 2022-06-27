@@ -264,7 +264,7 @@ font-family: 'Voces', cursive;
 #header_sub .submob ul {
   border-radius: 5px;
   padding: 40px 20px 40px 20px;
-  width: 100%;
+  width: 160px;
   height: 100%;
   background: #848484;
   display: flex;
@@ -2511,6 +2511,147 @@ aside .close {
   color: pink;
 }
 
+@media screen and (max-width: 1179px) {
+  .join .sub_visual {
+    width: 100%;
+  }
+  .join .inner {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .join .inner .wrap {
+    margin: 0 auto;
+    width: 480px;
+    height: 100%;
+    flex-direction: column;
+  }
+  .join .inner .wrap .visual {
+    height: 100%;
+    width: 100%;
+    padding: 20% 4%;
+  }
+  .join .inner .wrap .visual .txt {
+    width: 100%;
+    height: 220px;
+    padding: 4%;
+    border: 1px solid black;
+  }
+  .join .inner .wrap .visual .txt h2 {
+    font: bold 35px/1 "arial";
+    color: black;
+    margin-bottom: 30px;
+    opacity: 1;
+  }
+  .join .inner .wrap .visual .txt p {
+    margin-bottom: 19px;
+    color: black;
+    font: normal 18px/1 "arial";
+  }
+  .join .inner .wrap form {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid #969494;
+  }
+  .join .inner .wrap form fieldset {
+    padding: 19px;
+    width: 100%;
+  }
+  .join .inner .wrap form fieldset h2 {
+    color: #383434;
+    size: 70px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+  .join .inner .wrap form fieldset #terms {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    color: #7f88b3;
+  }
+  .join .inner .wrap form fieldset label[for=agree] {
+    font: bold 14px/1 "arial";
+    color: #666;
+  }
+  .join .inner .wrap form fieldset table {
+    margin-top: 20px;
+    width: 100%;
+    border-top: #383434 2px solid;
+    border-bottom: #383434 2px solid;
+    /*글씨 크키가 조절이 안됨*/
+  }
+  .join .inner .wrap form fieldset table caption .h {
+    color: #f0d4c8;
+    size: 80px;
+    font-weight: 700;
+  }
+  .join .inner .wrap form fieldset table th {
+    background: #969494;
+    padding: 15px 15px;
+    font: normal 14px/1 "arial";
+    color: white;
+    opacity: 0.9;
+  }
+  .join .inner .wrap form fieldset table th input[type=submit],
+.join .inner .wrap form fieldset table th input[type=reset] {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background: #444;
+    font: bold 14px/1 "arial";
+    color: #fff;
+    margin: 0 10px;
+  }
+  .join .inner .wrap form fieldset table th:last-child {
+    background: white;
+  }
+  .join .inner .wrap form fieldset table td {
+    border-bottom: 1px solid #bbb;
+    padding: 20px 15px;
+    font: normal 14px/1 "arial";
+    color: #444;
+  }
+  .join .inner .wrap form fieldset table td input[type=text],
+.join .inner .wrap form fieldset table td input[type=password] {
+    width: 95%;
+    height: 30px;
+  }
+  .join .inner .wrap form fieldset table td input[type=password2] {
+    width: 95%;
+    height: 30px;
+  }
+  .join .inner .wrap form fieldset table td label {
+    margin-right: 30px;
+  }
+  .join .inner .wrap form fieldset table td input[type=checkbox],
+.join .inner .wrap form fieldset table td input[type=radio] {
+    margin-right: 5px;
+    /*글씨가 조절이 안됨*/
+    font: bold 14px/1 "arial";
+    color: pink;
+  }
+}
+@media screen and (max-width: 539px) {
+  .join .sub_visual {
+    width: 100%;
+  }
+  .join .inner {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .join .inner .wrap {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #383434;
+  }
+}
 header {
   width: 100%;
   height: 100%;
