@@ -162,10 +162,16 @@ const secPosArr = [];
 
 const mainContSection = document.querySelectorAll('.content section');
 console.log(mainContSection);
-const serviceArticle = mainContSection[1].querySelectorAll('.wrap article');
 const boxArticle = mainContSection[0].querySelectorAll('.txt');
-console.log(boxArticle);
+const serviceArticle = mainContSection[1].querySelectorAll('.wrap article');
+const awardTable = mainContSection[2].querySelectorAll('table');
+const contactArticle = mainContSection[4].querySelectorAll(
+	'.inner .contwrap article'
+);
 
+console.log(contactArticle);
+// const contactArticle2 = mainContSection[4].querySelector()
+// const contactArticle3 = mainContSection[4].querySelector()
 // const aboutSec = document.querySelector('#about');
 
 for (let section of mainContSection) {
@@ -178,7 +184,7 @@ window.addEventListener('resize', scrollEvent);
 function scrollEvent() {
 	console.log(secPosArr);
 
-	if (scrollPos > secPosArr[0] - 300) {
+	if (scrollPos > secPosArr[0] - 500) {
 		for (let i = 0; i < boxArticle.length; i++) {
 			boxArticle[i].classList.add('on1');
 		}
@@ -195,6 +201,26 @@ function scrollEvent() {
 	} else {
 		for (let i = 0; i < serviceArticle.length; i++) {
 			serviceArticle[i].classList.remove('on2');
+		}
+	}
+
+	if (scrollPos > secPosArr[2] - 300) {
+		for (let i = 0; i < awardTable.length; i++) {
+			awardTable[i].classList.add('on3');
+		}
+	} else {
+		for (let i = 0; i < awardTable.length; i++) {
+			awardTable[i].classList.remove('on3');
+		}
+	}
+
+	if (scrollPos > secPosArr[4] - 600) {
+		for (let i = 0; i < contactArticle.length; i++) {
+			contactArticle[i].classList.add('on4');
+		}
+	} else {
+		for (let i = 0; i < contactArticle.length; i++) {
+			contactArticle[i].classList.remove('on4');
 		}
 	}
 }

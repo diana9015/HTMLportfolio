@@ -616,6 +616,12 @@ header {
 					margin-bottom: 20px;
 					width: 100%;
 					background: #fff;
+					margin-top: 80px;
+
+					&.on3 {
+						transition: all 1s;
+						margin-top: 0px;
+					}
 
 					tr {
 						height: 90px;
@@ -799,10 +805,17 @@ header {
 				article {
 					text-align: center;
 					margin-right: 20px;
-					background: $OrColor;
 					width: 380px;
 					height: 200px;
 					padding: 50px;
+					background: $OrColor;
+					opacity: 0;
+
+					&.on4 {
+						opacity: 1;
+
+						transition: all 1s;
+					}
 
 					&:nth-of-type(3) {
 						margin-right: 0px;
@@ -1364,7 +1377,7 @@ header {
 					padding: 20px;
 
 					&.on1 {
-						transition-delay: 0.5s;
+						transition-delay: 0.3s;
 						margin-top: 70px;
 						right: 0px;
 					}
@@ -1453,6 +1466,11 @@ header {
 									width: 100%;
 								}
 							}
+						}
+
+						&.on3 {
+							transition-delay: 0.2s;
+							transition: 1.5s;
 						}
 					}
 				}

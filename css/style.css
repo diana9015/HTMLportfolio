@@ -3196,6 +3196,11 @@ header .loginpop form a {
   margin-bottom: 20px;
   width: 100%;
   background: #fff;
+  margin-top: 80px;
+}
+.content .award .inner .wrap table.on3 {
+  transition: all 1s;
+  margin-top: 0px;
 }
 .content .award .inner .wrap table tr {
   height: 90px;
@@ -3359,10 +3364,15 @@ header .loginpop form a {
 .content .contact .inner .contwrap article {
   text-align: center;
   margin-right: 20px;
-  background: #f9f5f5;
   width: 380px;
   height: 200px;
   padding: 50px;
+  background: #f9f5f5;
+  opacity: 0;
+}
+.content .contact .inner .contwrap article.on4 {
+  opacity: 1;
+  transition: all 1s;
 }
 .content .contact .inner .contwrap article:nth-of-type(3) {
   margin-right: 0px;
@@ -3825,7 +3835,7 @@ header .loginpop form a {
     padding: 20px;
   }
   .content .boxwrap .box2 .txt.on1 {
-    transition-delay: 0.5s;
+    transition-delay: 0.3s;
     margin-top: 70px;
     right: 0px;
   }
@@ -3899,6 +3909,10 @@ header .loginpop form a {
   }
   .content .award .inner .wrap table tr td:nth-of-type(2) {
     width: 100%;
+  }
+  .content .award .inner .wrap table.on3 {
+    transition-delay: 0.2s;
+    transition: 1.5s;
   }
   .content .recommend .inner {
     padding-top: 110px;
