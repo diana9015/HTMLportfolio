@@ -155,3 +155,46 @@ btt.addEventListener('click', function (e) {
 		}
 	}, 15);
 });
+
+//스크롤 인터렉션 이벤트
+
+const secPosArr = [];
+
+const mainContSection = document.querySelectorAll('.content section');
+console.log(mainContSection);
+const serviceArticle = mainContSection[1].querySelectorAll('.wrap article');
+const boxArticle = mainContSection[0].querySelectorAll('.txt');
+console.log(boxArticle);
+
+// const aboutSec = document.querySelector('#about');
+
+for (let section of mainContSection) {
+	secPosArr.push(section.offsetTop);
+}
+
+window.addEventListener('scroll', scrollEvent);
+window.addEventListener('resize', scrollEvent);
+
+function scrollEvent() {
+	console.log(secPosArr);
+
+	if (scrollPos > secPosArr[0] - 300) {
+		for (let i = 0; i < boxArticle.length; i++) {
+			boxArticle[i].classList.add('on1');
+		}
+	} else {
+		for (let i = 0; i < boxArticle.length; i++) {
+			boxArticle[i].classList.remove('on1');
+		}
+	}
+
+	if (scrollPos > secPosArr[1] - 600) {
+		for (let i = 0; i < serviceArticle.length; i++) {
+			serviceArticle[i].classList.add('on2');
+		}
+	} else {
+		for (let i = 0; i < serviceArticle.length; i++) {
+			serviceArticle[i].classList.remove('on2');
+		}
+	}
+}
