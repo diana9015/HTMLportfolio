@@ -140,8 +140,6 @@ if (docuheight != '') {
 window.addEventListener('scroll', function () {
 	scrollPos = docElem.scrollTop; //스크롤 양 정의
 
-	console.log(scrollPos);
-
 	btt.className = scrollPos > offset ? 'visible' : '';
 });
 btt.addEventListener('click', function (e) {
@@ -154,6 +152,38 @@ btt.addEventListener('click', function (e) {
 			clearInterval(scrollToTop);
 		}
 	}, 15);
+});
+
+//카운터
+const counters = document.querySelectorAll('.procounter');
+
+counters.forEach((counter) => {
+	counter.innerHTML = '0';
+
+	const updateCounter = () => {
+		// data-target으로 HTML에서 준 숫자를 가져와
+		const target = +counter.getAttribute('data-target');
+		//문자가 아니라 숫자로 바꿔줘야해서 counter앞에 +써줌
+
+		//타켓의 타입이 뭔지, 타켁이 뭔지 확인
+		console.log(typeof target, target);
+		const c = +counter.innerText;
+		console.log(target);
+
+		// //타켓 숫자들을 100으로 나눠준다.
+		const increment = target / 100;
+		console.log(increment);
+
+		console.log(counter.innerText);
+
+		if (c < target) {
+			counter.innerText = `${Math.ceil(c + increment)}`;
+			setTimeout(updateCounter, 30);
+		} else {
+			counter.innerText = target;
+		}
+	};
+	updateCounter();
 });
 
 //스크롤 인터렉션 이벤트
@@ -169,11 +199,6 @@ const contactArticle = mainContSection[4].querySelectorAll(
 	'.inner .contwrap article'
 );
 
-console.log(contactArticle);
-// const contactArticle2 = mainContSection[4].querySelector()
-// const contactArticle3 = mainContSection[4].querySelector()
-// const aboutSec = document.querySelector('#about');
-
 for (let section of mainContSection) {
 	secPosArr.push(section.offsetTop);
 }
@@ -182,9 +207,7 @@ window.addEventListener('scroll', scrollEvent);
 window.addEventListener('resize', scrollEvent);
 
 function scrollEvent() {
-	console.log(secPosArr);
-
-	if (scrollPos > secPosArr[0] - 500) {
+	if (scrollPos > secPosArr[0] - 550) {
 		for (let i = 0; i < boxArticle.length; i++) {
 			boxArticle[i].classList.add('on1');
 		}
@@ -194,7 +217,7 @@ function scrollEvent() {
 		}
 	}
 
-	if (scrollPos > secPosArr[1] - 600) {
+	if (scrollPos > secPosArr[1] - 650) {
 		for (let i = 0; i < serviceArticle.length; i++) {
 			serviceArticle[i].classList.add('on2');
 		}
@@ -204,7 +227,7 @@ function scrollEvent() {
 		}
 	}
 
-	if (scrollPos > secPosArr[2] - 300) {
+	if (scrollPos > secPosArr[2] - 350) {
 		for (let i = 0; i < awardTable.length; i++) {
 			awardTable[i].classList.add('on3');
 		}
@@ -214,7 +237,7 @@ function scrollEvent() {
 		}
 	}
 
-	if (scrollPos > secPosArr[4] - 600) {
+	if (scrollPos > secPosArr[4] - 700) {
 		for (let i = 0; i < contactArticle.length; i++) {
 			contactArticle[i].classList.add('on4');
 		}
