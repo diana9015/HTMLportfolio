@@ -1719,6 +1719,27 @@ aside .close {
     font: normal 15px/1.2 "arial";
   }
 }
+.community .inner .comu_top {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  filter: grayscale(0.3);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/pmv-chamara-9mWm8cSkxFc-unsplash.jpg);
+}
+.community .inner .comu_top::after {
+  content: "";
+  right: 0px;
+  position: absolute;
+  background: url(../img/pmv-chamara-9mWm8cSkxFc-unsplash.jpg);
+  border-top: 300px solid white;
+  border-bottom: 100px solid white;
+  border-left: 300px solid transparent;
+  border-right: 0px solid transparent;
+}
 .community .inner table {
   width: 100%;
   border-top: 2px solid #111;
@@ -1727,7 +1748,7 @@ aside .close {
   border-collapse: collapse;
 }
 .community .inner table th {
-  padding: 30px 0;
+  padding: 30px 50px;
   margin-bottom: 5px;
   border-bottom: 2px soild black;
   background: gainsboro;
@@ -1763,15 +1784,19 @@ aside .close {
   width: 100%;
   text-align: center;
   padding: 20px 20px;
-  display: flex;
-  justify-content: center;
 }
-.community .inner .pagination::after {
+.community .inner .pagination .paginner {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+.community .inner .pagination .paginner::after {
   content: "";
   display: block;
   clear: both;
 }
-.community .inner .pagination .prev {
+.community .inner .pagination .paginner .prev {
+  margin-right: 10px;
   width: 20px;
   float: left;
   display: block;
@@ -1781,11 +1806,12 @@ aside .close {
   text-align: center;
   transition: 1s;
 }
-.community .inner .pagination .prev:hover {
+.community .inner .pagination .paginner .prev:hover {
   color: #969494;
   transform: scale(1.2);
 }
-.community .inner .pagination .next {
+.community .inner .pagination .paginner .next {
+  margin-left: 10px;
   width: 20px;
   float: right;
   display: block;
@@ -1795,23 +1821,22 @@ aside .close {
   text-align: center;
   transition: 1s;
 }
-.community .inner .pagination .next:hover {
+.community .inner .pagination .paginner .next:hover {
   color: #969494;
   transform: scale(1.2);
 }
-.community .inner .pagination .numbers {
+.community .inner .pagination .paginner .numbers {
   display: inline-block;
   font-size: 0;
-  width: 350px;
 }
-.community .inner .pagination .numbers a {
+.community .inner .pagination .paginner .numbers a {
   display: inline-block;
   width: 30px;
   height: 30px;
   font: 12px/30px "arial";
   color: black;
 }
-.community .inner .pagination .numbers a:hover {
+.community .inner .pagination .paginner .numbers a:hover {
   background: #969494;
   color: #fff;
   border-radius: 50%;
@@ -1864,62 +1889,13 @@ aside .close {
     color: black;
     font: normal 15px/1 "arial";
   }
-  .community .inner .pagination {
+}
+@media screen and (max-width: 539px) {
+  .community .inner {
     width: 100%;
-    text-align: center;
-    padding: 20px 20px;
-    justify-content: center;
-  }
-  .community .inner .pagination::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  .community .inner .pagination .prev {
-    float: left;
-    display: block;
-    background: white;
-    font: 12px/30px "arial";
-    color: black;
-    text-align: center;
-    transition: 1s;
-  }
-  .community .inner .pagination .prev:hover {
-    color: #969494;
-    transform: scale(1.2);
-  }
-  .community .inner .pagination .next {
-    float: right;
-    display: block;
-    background: white;
-    font: 12px/30px "arial";
-    color: black;
-    text-align: center;
-    transition: 1s;
-  }
-  .community .inner .pagination .next:hover {
-    color: #969494;
-    transform: scale(1.2);
-  }
-  .community .inner .pagination .numbers {
-    display: inline-block;
-    font-size: 0;
-    width: 100%;
-  }
-  .community .inner .pagination .numbers a {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    font: 12px/30px "arial";
-    color: black;
-  }
-  .community .inner .pagination .numbers a:nth-last-of-type(1) {
-    margin-right: 0px;
-  }
-  .community .inner .pagination .numbers a:hover {
-    background: #969494;
-    color: #fff;
-    border-radius: 50%;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
   }
 }
 .contactus .inner {
