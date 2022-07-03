@@ -1,6 +1,6 @@
 .aboutus {
 	.inner {
-		width: 1180px;
+		width: 1080px;
 
 		.boxwrap {
 			width: 100%;
@@ -169,8 +169,8 @@
 			display: flex;
 
 			.wrap {
-				width: 380px;
-				height: 1180px;
+				width: calc((100% - 40px) / 3);
+				height: 1080px;
 				margin-right: 20px;
 				text-align: center;
 

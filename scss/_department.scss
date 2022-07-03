@@ -2,7 +2,7 @@
 	height: 100%;
 	width: 100%;
 	.inner {
-		width: 1180px;
+		width: 1080px;
 		margin: 0 auto;
 		height: 100%;
 
@@ -554,7 +554,38 @@
 			h1 {
 				font-size: 40px;
 			}
+			.introloc {
+				padding-bottom: 70px;
+				padding-top: 190px;
+				flex-direction: column;
+				.cubewrap {
+					margin: 0 auto;
+					padding-top: 0px;
+					left: 0px;
+				}
 
+				.introbox {
+					margin-right: 20px;
+					margin: 0 auto;
+					position: relative;
+					width: 100%;
+					transition: all 2s;
+
+					li {
+						margin-right: 20px;
+						background: $OrColor;
+					}
+				}
+			}
+
+			.cubeintro {
+				width: 100%;
+				position: absolute;
+				top: 500px;
+				h2 {
+					font-size: 18px;
+				}
+			}
 			.division {
 				height: auto;
 				background: none;
