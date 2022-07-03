@@ -414,11 +414,12 @@ header {
 				right: 0px;
 				top: 0px;
 				padding: 7%;
-				opacity: 0.9;
+				opacity: 0;
 
 				&.on1 {
-					transition: all 1s;
+					transition: all 1.2s;
 					margin-top: 5%;
+					opacity: 0.9;
 				}
 
 				h4 {
@@ -463,7 +464,7 @@ header {
 				margin-top: 15%;
 				position: absolute;
 				padding: 7%;
-				opacity: 0.9;
+				opacity: 0;
 
 				h4 {
 					font: normal 27px/1 'arial';
@@ -476,6 +477,7 @@ header {
 				}
 
 				&.on1 {
+					opacity: 0.9;
 					transition-delay: 10s;
 					transition: all 1.2s;
 					margin-top: 5%;
@@ -517,6 +519,7 @@ header {
 					margin-right: 20px;
 					text-align: center;
 					position: relative;
+					opacity: 0;
 
 					span {
 						display: block;
@@ -603,7 +606,8 @@ header {
 
 					&.on2 {
 						margin-top: 0px;
-						transition: all 1s;
+						transition: all 1.2s;
+						opacity: 1;
 					}
 				}
 
@@ -646,10 +650,12 @@ header {
 					width: 100%;
 					background: #fff;
 					margin-top: 80px;
+					opacity: 0;
 
 					&.on3 {
-						transition: all 1s;
+						transition: all 1.2s;
 						margin-top: 0px;
+						opacity: 1;
 					}
 
 					tr {
@@ -842,8 +848,7 @@ header {
 
 					&.on4 {
 						opacity: 1;
-
-						transition: all 1s;
+						transition: all 1.2s;
 					}
 
 					&:nth-of-type(3) {

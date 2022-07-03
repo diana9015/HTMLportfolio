@@ -681,105 +681,6 @@ font-family: 'Voces', cursive;
   background-size: cover;
   transform: rotateX(-180deg);
 }
-.department .inner .division {
-  margin-top: 80px;
-  background: url(../img/images.jpg) no-repeat center;
-  width: 100%;
-  height: 800px;
-}
-.department .inner .div_tree {
-  position: absolute;
-  top: -9999px;
-  opacity: 0;
-}
-.department .inner .div_tree li span {
-  margin-left: 50px;
-  display: block;
-  width: 25%;
-  height: 50px;
-  background: #0588fb;
-  /*폰트정렬 유심히 보기*/
-  font: bold 13px/50px "arial";
-  color: white;
-  text-align: center;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  position: relative;
-}
-.department .inner .div_tree li span:hover {
-  background: #474747;
-  transition: 0.8s;
-}
-.department .inner .div_tree li span::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 115px;
-  background: #aaa;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-}
-.department .inner .div_tree li ul li span {
-  transform: translateX(70px);
-  background: #64b5fc;
-}
-.department .inner .div_tree li ul li span:hover {
-  background: #474747;
-  transition: 0.8s;
-  color: white;
-}
-.department .inner .div_tree li ul li span::before {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 16%;
-  background: gray;
-  position: absolute;
-  top: 50%;
-  left: -20px;
-}
-.department .inner .div_tree li ul li:nth-of-type(1) span::after {
-  height: 0;
-}
-.department .inner .div_tree li ul li:nth-of-type(2) span::after {
-  height: 955px;
-  background: gray;
-}
-.department .inner .div_tree li ul li ul li span {
-  transform: translateX(140px);
-  background: #baddfc;
-  font: bold 13px/50px "arial";
-  color: #0371f8;
-}
-.department .inner .div_tree li ul li ul li:nth-of-type(1) span::after {
-  height: 115px;
-  background: gray;
-}
-.department .inner .div_tree li ul li ul li:nth-of-type(2) span::after {
-  height: 115px;
-  background: gray;
-}
-.department .inner .div_tree li ul li ul li:nth-of-type(3) span::after {
-  height: 115px;
-  background: gray;
-}
-.department .inner .div_tree li ul li ul li:nth-of-type(4) span::after {
-  height: 185px;
-  background: gray;
-}
-.department .inner .div_tree li ul li ul li:nth-of-type(5) span::after {
-  height: 45px;
-  background: gray;
-}
-.department .inner .div_tree li ul li ul li ul li span {
-  transform: translateX(210px);
-  background: #edf3f8;
-  color: #0371f8;
-}
-.department .inner .div_tree li ul li ul li ul li span::after {
-  display: none;
-}
 
 @media screen and (max-width: 1179px) {
   .department .inner {
@@ -820,123 +721,23 @@ font-family: 'Voces', cursive;
   .department .inner .cubeintro h2 {
     font-size: 18px;
   }
-  .department .inner .division {
-    margin-top: 80px;
-    background: url(../img/images.jpg) no-repeat center;
-    width: 100%;
-    height: 800px;
-  }
-  .department .inner .div_tree {
-    position: absolute;
-    top: -9999px;
-    opacity: 0;
-  }
-  .department .inner .div_tree li span {
-    margin-left: 50px;
-    display: block;
-    width: 25%;
-    height: 50px;
-    background: #0588fb;
-    /*폰트정렬 유심히 보기*/
-    font: bold 13px/50px "arial";
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    position: relative;
-  }
-  .department .inner .div_tree li span:hover {
-    background: #474747;
-    transition: 0.8s;
-  }
-  .department .inner .div_tree li span::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 115px;
-    background: #aaa;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-  }
-  .department .inner .div_tree li ul li span {
-    transform: translateX(70px);
-    background: #64b5fc;
-  }
-  .department .inner .div_tree li ul li span:hover {
-    background: #474747;
-    transition: 0.8s;
-    color: white;
-  }
-  .department .inner .div_tree li ul li span::before {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 16%;
-    background: gray;
-    position: absolute;
-    top: 50%;
-    left: -20px;
-  }
-  .department .inner .div_tree li ul li:nth-of-type(1) span::after {
-    height: 0;
-  }
-  .department .inner .div_tree li ul li:nth-of-type(2) span::after {
-    height: 955px;
-    background: gray;
-  }
-  .department .inner .div_tree li ul li ul li span {
-    transform: translateX(140px);
-    background: #baddfc;
-    font: bold 13px/50px "arial";
-    color: #0371f8;
-  }
-  .department .inner .div_tree li ul li ul li:nth-of-type(1) span::after {
-    height: 115px;
-    background: gray;
-  }
-  .department .inner .div_tree li ul li ul li:nth-of-type(2) span::after {
-    height: 115px;
-    background: gray;
-  }
-  .department .inner .div_tree li ul li ul li:nth-of-type(3) span::after {
-    height: 115px;
-    background: gray;
-  }
-  .department .inner .div_tree li ul li ul li:nth-of-type(4) span::after {
-    height: 185px;
-    background: gray;
-  }
-  .department .inner .div_tree li ul li ul li:nth-of-type(5) span::after {
-    height: 45px;
-    background: gray;
-  }
-  .department .inner .div_tree li ul li ul li ul li span {
-    transform: translateX(210px);
-    background: #edf3f8;
-    color: #0371f8;
-  }
-  .department .inner .div_tree li ul li ul li ul li span::after {
-    display: none;
-  }
 }
 @media screen and (max-width: 539px) {
   .department .inner {
     width: 100%;
-    /*호버가 안걸리는 이유?*/
   }
   .department .inner h1 {
     font-size: 40px;
   }
   .department .inner .introloc {
-    padding-bottom: 70px;
-    padding-top: 190px;
-    flex-direction: column;
+    padding-top: 150px;
   }
   .department .inner .introloc .cubewrap {
-    margin: 0 auto;
-    padding-top: 0px;
-    left: 0px;
+    width: 200px;
+    height: 200px;
+  }
+  .department .inner .introloc .cubewrap .cube {
+    width: 100%;
   }
   .department .inner .introloc .introbox {
     margin-right: 20px;
@@ -945,9 +746,61 @@ font-family: 'Voces', cursive;
     width: 100%;
     transition: all 2s;
   }
-  .department .inner .introloc .introbox li {
-    margin-right: 20px;
-    background: #f9f5f5;
+  .department .inner .introloc .introbox li .profile {
+    width: 100%;
+    height: 100%;
+  }
+  .department .inner .introloc .introbox li .profile .profileCont .name {
+    text-align: center;
+    width: 100%;
+  }
+  .department .inner .introloc .introbox li .profile .profileCont .name h2 {
+    font: normal 35px/1 "arial";
+    color: #de897c;
+  }
+  .department .inner .introloc .introbox li .profile .profileCont h3 {
+    font: normal 20px/1 "arial";
+    color: #de897c;
+  }
+  .department .inner .introloc .introbox li .profile .profileCont p {
+    font: normal 16px/1.1 "arial";
+    color: #383434;
+    margin-bottom: 10px;
+  }
+  .department .inner .introloc .cube__face--front {
+    width: 200px;
+    height: 200px;
+    transform: rotate(0deg) translateZ(100px);
+  }
+  .department .inner .introloc .cube__face--right {
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    transform: rotateY(-90deg);
+  }
+  .department .inner .introloc .cube__face--back {
+    width: 200px;
+    height: 200px;
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  .department .inner .introloc .cube__face--left {
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    transform: rotateY(-90deg) translateZ(-100px);
+  }
+  .department .inner .introloc .cube__face--top {
+    width: 200px;
+    height: 200px;
+    transition: center center;
+    transform: rotateX(90deg) translateZ(-100px);
+  }
+  .department .inner .introloc .cube__face--bottom {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    transition: center center;
+    transform: rotateX(-360deg) rotateX(-90deg) translateZ(0px);
   }
   .department .inner .cubeintro {
     width: 100%;
@@ -956,16 +809,6 @@ font-family: 'Voces', cursive;
   }
   .department .inner .cubeintro h2 {
     font-size: 18px;
-  }
-  .department .inner .division {
-    height: auto;
-    background: none;
-  }
-  .department .inner .division .div_tree {
-    position: relative;
-    top: 0px;
-    opacity: 1;
-    transition: 3s;
   }
 }
 .information .inner {
@@ -2428,7 +2271,6 @@ aside .close {
   background: #383434;
 }
 .join .inner .wrap .visual {
-  height: 100%;
   width: 50%;
   padding: 25% 5%;
   background: url(../img/nati-melnychuk-dFBhXJHKNeo-unsplash.jpg);
@@ -3043,11 +2885,12 @@ header .loginpop form a {
   right: 0px;
   top: 0px;
   padding: 7%;
-  opacity: 0.9;
+  opacity: 0;
 }
 .content .boxwrap .box1 .txt.on1 {
-  transition: all 1s;
+  transition: all 1.2s;
   margin-top: 5%;
+  opacity: 0.9;
 }
 .content .boxwrap .box1 .txt h4 {
   font: normal 27px/1 "arial";
@@ -3087,7 +2930,7 @@ header .loginpop form a {
   margin-top: 15%;
   position: absolute;
   padding: 7%;
-  opacity: 0.9;
+  opacity: 0;
 }
 .content .boxwrap .box2 .txt h4 {
   font: normal 27px/1 "arial";
@@ -3099,6 +2942,7 @@ header .loginpop form a {
   color: black;
 }
 .content .boxwrap .box2 .txt.on1 {
+  opacity: 0.9;
   transition-delay: 10s;
   transition: all 1.2s;
   margin-top: 5%;
@@ -3136,6 +2980,7 @@ header .loginpop form a {
   margin-right: 20px;
   text-align: center;
   position: relative;
+  opacity: 0;
 }
 .content .servicelist .inner .wrap article span {
   display: block;
@@ -3211,7 +3056,8 @@ header .loginpop form a {
 }
 .content .servicelist .inner .wrap article.on2 {
   margin-top: 0px;
-  transition: all 1s;
+  transition: all 1.2s;
+  opacity: 1;
 }
 .content .servicelist .inner .wrap::after {
   content: "";
@@ -3248,10 +3094,12 @@ header .loginpop form a {
   width: 100%;
   background: #fff;
   margin-top: 80px;
+  opacity: 0;
 }
 .content .award .inner .wrap table.on3 {
-  transition: all 1s;
+  transition: all 1.2s;
   margin-top: 0px;
+  opacity: 1;
 }
 .content .award .inner .wrap table tr {
   height: 90px;
@@ -3423,7 +3271,7 @@ header .loginpop form a {
 }
 .content .contact .inner .contwrap article.on4 {
   opacity: 1;
-  transition: all 1s;
+  transition: all 1.2s;
 }
 .content .contact .inner .contwrap article:nth-of-type(3) {
   margin-right: 0px;

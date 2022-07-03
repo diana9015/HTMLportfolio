@@ -236,137 +236,6 @@
 				}
 			}
 		}
-
-		//조직도//
-
-		.division {
-			margin-top: 80px;
-			background: url(../img/images.jpg) no-repeat center;
-			width: 100%;
-			height: 800px;
-		}
-
-		.div_tree {
-			position: absolute;
-			top: -9999px;
-			opacity: 0;
-
-			//1depth
-			li {
-				span {
-					margin-left: 50px;
-					display: block;
-					width: 25%;
-					height: 50px;
-					background: rgb(5, 136, 251);
-					/*폰트정렬 유심히 보기*/
-					font: bold 13px/50px 'arial';
-					color: white;
-					text-align: center;
-					margin-bottom: 20px;
-					border-radius: 20px;
-					position: relative;
-
-					&:hover {
-						background: rgb(71, 71, 71);
-						transition: 0.8s;
-					}
-
-					&::after {
-						content: '';
-						display: block;
-						width: 1px;
-						height: calc((50px + 20px) * 2 - 25px);
-						background: #aaa;
-						position: absolute;
-						top: 50px;
-						left: 50px;
-					}
-				}
-
-				//2depth
-				ul li {
-					span {
-						transform: translateX(70px);
-						background: rgb(100, 181, 252);
-
-						&:hover {
-							background: rgb(71, 71, 71);
-							transition: 0.8s;
-							color: white;
-						}
-
-						&::before {
-							content: '';
-							display: block;
-							height: 1px;
-							width: 16%;
-							background: gray;
-							position: absolute;
-							top: 50%;
-							left: -20px;
-						}
-					}
-
-					&:nth-of-type(1) span::after {
-						height: 0;
-					}
-
-					&:nth-of-type(2) span::after {
-						height: calc((50px + 20px) * 14 - 25px);
-						background: gray;
-					}
-
-					//3depth
-					ul li {
-						span {
-							transform: translateX(140px);
-							background: rgb(186, 221, 252);
-							font: bold 13px/50px 'arial';
-							color: rgb(3, 113, 248);
-						}
-
-						&:nth-of-type(1) span::after {
-							height: calc((50px + 20px) * 2 - 25px);
-							background: gray;
-						}
-
-						&:nth-of-type(2) span::after {
-							height: calc((50px + 20px) * 2 - 25px);
-							background: gray;
-						}
-
-						&:nth-of-type(3) span::after {
-							height: calc((50px + 20px) * 2 - 25px);
-							background: gray;
-						}
-
-						&:nth-of-type(4) span::after {
-							height: calc((50px + 20px) * 3 - 25px);
-							background: gray;
-						}
-
-						&:nth-of-type(5) span::after {
-							height: calc(70px - 25px);
-							background: gray;
-						}
-
-						//4depth
-						ul li {
-							span {
-								transform: translateX(210px);
-								background: rgb(237, 243, 248);
-								color: rgb(3, 113, 248);
-
-								&::after {
-									display: none;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -414,135 +283,6 @@
 					font-size: 18px;
 				}
 			}
-
-			.division {
-				margin-top: 80px;
-				background: url(../img/images.jpg) no-repeat center;
-				width: 100%;
-				height: 800px;
-			}
-
-			.div_tree {
-				position: absolute;
-				top: -9999px;
-				opacity: 0;
-
-				//1depth
-				li {
-					span {
-						margin-left: 50px;
-						display: block;
-						width: 25%;
-						height: 50px;
-						background: rgb(5, 136, 251);
-						/*폰트정렬 유심히 보기*/
-						font: bold 13px/50px 'arial';
-						color: white;
-						text-align: center;
-						margin-bottom: 20px;
-						border-radius: 20px;
-						position: relative;
-
-						&:hover {
-							background: rgb(71, 71, 71);
-							transition: 0.8s;
-						}
-
-						&::after {
-							content: '';
-							display: block;
-							width: 1px;
-							height: calc((50px + 20px) * 2 - 25px);
-							background: #aaa;
-							position: absolute;
-							top: 50px;
-							left: 50px;
-						}
-					}
-
-					//2depth
-					ul li {
-						span {
-							transform: translateX(70px);
-							background: rgb(100, 181, 252);
-
-							&:hover {
-								background: rgb(71, 71, 71);
-								transition: 0.8s;
-								color: white;
-							}
-
-							&::before {
-								content: '';
-								display: block;
-								height: 1px;
-								width: 16%;
-								background: gray;
-								position: absolute;
-								top: 50%;
-								left: -20px;
-							}
-						}
-
-						&:nth-of-type(1) span::after {
-							height: 0;
-						}
-
-						&:nth-of-type(2) span::after {
-							height: calc((50px + 20px) * 14 - 25px);
-							background: gray;
-						}
-
-						//3depth
-						ul li {
-							span {
-								transform: translateX(140px);
-								background: rgb(186, 221, 252);
-								font: bold 13px/50px 'arial';
-								color: rgb(3, 113, 248);
-							}
-
-							&:nth-of-type(1) span::after {
-								height: calc((50px + 20px) * 2 - 25px);
-								background: gray;
-							}
-
-							&:nth-of-type(2) span::after {
-								height: calc((50px + 20px) * 2 - 25px);
-								background: gray;
-							}
-
-							&:nth-of-type(3) span::after {
-								height: calc((50px + 20px) * 2 - 25px);
-								background: gray;
-							}
-
-							&:nth-of-type(4) span::after {
-								height: calc((50px + 20px) * 3 - 25px);
-								background: gray;
-							}
-
-							&:nth-of-type(5) span::after {
-								height: calc(70px - 25px);
-								background: gray;
-							}
-
-							//4depth
-							ul li {
-								span {
-									transform: translateX(210px);
-									background: rgb(237, 243, 248);
-									color: rgb(3, 113, 248);
-
-									&::after {
-										display: none;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -555,15 +295,14 @@
 				font-size: 40px;
 			}
 			.introloc {
-				padding-bottom: 70px;
-				padding-top: 190px;
-				flex-direction: column;
+				padding-top: 150px;
 				.cubewrap {
-					margin: 0 auto;
-					padding-top: 0px;
-					left: 0px;
+					width: 200px;
+					height: 200px;
+					.cube {
+						width: 100%;
+					}
 				}
-
 				.introbox {
 					margin-right: 20px;
 					margin: 0 auto;
@@ -572,9 +311,70 @@
 					transition: all 2s;
 
 					li {
-						margin-right: 20px;
-						background: $OrColor;
+						.profile {
+							width: 100%;
+							height: 100%;
+
+							.profileCont {
+								.name {
+									text-align: center;
+									width: 100%;
+
+									h2 {
+										font: normal 35px/1 'arial';
+										color: $DbgColor;
+									}
+								}
+
+								h3 {
+									font: normal 20px/1 'arial';
+									color: $DbgColor;
+								}
+
+								p {
+									font: normal 16px/1.1 'arial';
+									color: $DkColor;
+									margin-bottom: 10px;
+								}
+							}
+						}
 					}
+				}
+
+				.cube__face--front {
+					width: 200px;
+					height: 200px;
+					transform: rotate(0deg) translateZ(100px);
+				}
+				.cube__face--right {
+					width: 200px;
+					height: 200px;
+					left: -100px;
+					transform: rotateY(-90deg);
+				}
+				.cube__face--back {
+					width: 200px;
+					height: 200px;
+					transform: rotateY(180deg) translateZ(100px);
+				}
+				.cube__face--left {
+					width: 200px;
+					height: 200px;
+					right: 0px;
+					transform: rotateY(-90deg) translateZ(-100px);
+				}
+				.cube__face--top {
+					width: 200px;
+					height: 200px;
+					transition: center center;
+					transform: rotateX(90deg) translateZ(-100px);
+				}
+				.cube__face--bottom {
+					width: 200px;
+					height: 200px;
+					top: -100px;
+					transition: center center;
+					transform: rotateX(-360deg) rotateX(-90deg) translateZ(0px);
 				}
 			}
 
@@ -586,19 +386,6 @@
 					font-size: 18px;
 				}
 			}
-			.division {
-				height: auto;
-				background: none;
-
-				.div_tree {
-					position: relative;
-					top: 0px;
-					opacity: 1;
-					transition: 3s;
-				}
-			}
-
-			/*호버가 안걸리는 이유?*/
 		}
 	}
 }
